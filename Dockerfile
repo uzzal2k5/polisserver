@@ -18,7 +18,9 @@ ENV PATH $NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
 #
 ADD polisServer polisServer
 RUN cd polisServer && npm install
+COPY pgsql-client.sh .
+RUN chmod a+x pgsql-client.sh && sh pgsql-client.sh
 
-EXPOSE 5000
+EXPOSE 5000  5001
 
 #ENTRYPOINT ["x"]
