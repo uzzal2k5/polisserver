@@ -25,6 +25,6 @@ COPY pgsql-client.sh ./
 RUN chmod a+x pgsql-client.sh && sh pgsql-client.sh
 
 
-EXPOSE 5000  5001
+EXPOSE 5000
 
 ENTRYPOINT ["sh","x"]
