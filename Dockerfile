@@ -1,6 +1,7 @@
 FROM node:6
 MAINTAINER uzzal, uzzal2k5@gmail.com
-WORKDIR /polisServer
+WORKDIR /server
+RUN apt-get update && apt-get install -y net-tools curl wget
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 # nvm environment variables
 ENV NVM_DIR .nvm
@@ -20,10 +21,10 @@ ENV PATH $NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
 #
 ADD polisServer ./
 RUN ls -la
-RUN npm install
 COPY pgsql-client.sh ./
 RUN chmod a+x pgsql-client.sh && sh pgsql-client.sh
-
+COPY yarn.sh ./
+RUN chmod a+x yarn.sh && sh yarn.sh
 
 EXPOSE 5000
 
