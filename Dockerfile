@@ -9,7 +9,8 @@ RUN chmod a+x pgsql-client.sh && sh pgsql-client.sh
 ADD polisServer ./
 
 # Generate package.json and install
-RUN npm init -y
+#RUN npm init -y
+#COPY package.json .
 RUN npm i -D eslint
 RUN npm install --unsafe-perm
 

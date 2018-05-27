@@ -1,0 +1,189 @@
+Step 6/11 : COPY package.json .
+ ---> a45b31094bf0
+Step 7/11 : RUN npm i -D eslint
+ ---> Running in 39b0e0a5254f
+npm notice save eslint is being moved from dependencies to devDependencies
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN polis@0.0.0 No license field.
+
++ eslint@2.13.1
+added 132 packages in 108.203s
+Removing intermediate container 39b0e0a5254f
+ ---> 0d58f3c5b978
+Step 8/11 : RUN npm install --unsafe-perm
+ ---> Running in 4296730dae37
+npm WARN deprecated mimelib@0.2.19: This project is unmaintained
+npm WARN deprecated mongodb@2.0.46: Please upgrade to 2.2.19 or higher
+npm WARN deprecated bcrypt@0.8.6: bcrypt < v2.0.0 is susceptible to bcrypt wrap-around bug. Upgrade to bcrypt >= v2.0.0 for improved support for newer bcrypt hashes
+npm WARN deprecated node-uuid@1.4.8: Use uuid module instead
+npm WARN deprecated connect@2.30.2: connect 2.x series is deprecated
+npm WARN notice [SECURITY] request has the following vulnerability: 1 moderate. Go here for more details: https://nodesecurity.io/advisories?search=request&version=2.12.0 - Run `npm i npm@latest -g` to upgrade your npm version, and then `npm audit` to get more info.
+npm WARN notice [SECURITY] tunnel-agent has the following vulnerability: 1 moderate. Go here for more details: https://nodesecurity.io/advisories?search=tunnel-agent&version=0.4.3 - Run `npm i npm@latest -g` to upgrade your npm version, and then `npm audit` to get more info.
+npm WARN notice [SECURITY] base64-url has the following vulnerability: 1 high. Go here for more details: https://nodesecurity.io/advisories?search=base64-url&version=1.2.1 - Run `npm i npm@latest -g` to upgrade your npm version, and then `npm audit` to get more info.
+npm WARN notice [SECURITY] debug has the following vulnerability: 1 low. Go here for more details: https://nodesecurity.io/advisories?search=debug&version=2.2.0 - Run `npm i npm@latest -g` to upgrade your npm version, and then `npm audit` to get more info.
+npm WARN notice [SECURITY] debug has the following vulnerability: 1 low. Go here for more details: https://nodesecurity.io/advisories?search=debug&version=2.2.0 - Run `npm i npm@latest -g` to upgrade your npm version, and then `npm audit` to get more info.
+npm WARN notice [SECURITY] debug has the following vulnerability: 1 low. Go here for more details: https://nodesecurity.io/advisories?search=debug&version=2.2.0 - Run `npm i npm@latest -g` to upgrade your npm version, and then `npm audit` to get more info.
+npm WARN notice [SECURITY] sql has the following vulnerability: 1 moderate. Go here for more details: https://nodesecurity.io/advisories?search=sql&version=0.34.0 - Run `npm i npm@latest -g` to upgrade your npm version, and then `npm audit` to get more info.
+npm WARN notice [SECURITY] lodash has the following vulnerability: 1 low. Go here for more details: https://nodesecurity.io/advisories?search=lodash&version=1.3.1 - Run `npm i npm@latest -g` to upgrade your npm version, and then `npm audit` to get more info.
+npm WARN notice [SECURITY] mime has the following vulnerability: 1 moderate. Go here for more details: https://nodesecurity.io/advisories?search=mime&version=1.3.4 - Run `npm i npm@latest -g` to upgrade your npm version, and then `npm audit` to get more info.
+npm WARN notice [SECURITY] https-proxy-agent has the following vulnerability: 1 high. Go here for more details: https://nodesecurity.io/advisories?search=https-proxy-agent&version=1.0.0 - Run `npm i npm@latest -g` to upgrade your npm version, and then `npm audit` to get more info.
+npm WARN notice [SECURITY] mime has the following vulnerability: 1 moderate. Go here for more details: https://nodesecurity.io/advisories?search=mime&version=1.3.4 - Run `npm i npm@latest -g` to upgrade your npm version, and then `npm audit` to get more info.
+npm WARN notice [SECURITY] negotiator has the following vulnerability: 1 high. Go here for more details: https://nodesecurity.io/advisories?search=negotiator&version=0.5.3 - Run `npm i npm@latest -g` to upgrade your npm version, and then `npm audit` to get more info.
+npm WARN notice [SECURITY] fresh has the following vulnerability: 1 high. Go here for more details: https://nodesecurity.io/advisories?search=fresh&version=0.3.0 - Run `npm i npm@latest -g` to upgrade your npm version, and then `npm audit` to get more info.
+npm WARN notice [SECURITY] hoek has the following vulnerability: 1 moderate. Go here for more details: https://nodesecurity.io/advisories?search=hoek&version=2.16.3 - Run `npm i npm@latest -g` to upgrade your npm version, and then `npm audit` to get more info.
+
+> kerberos@0.0.23 install /server/node_modules/kerberos
+> (node-gyp rebuild) || (exit 0)
+
+make: Entering directory '/server/node_modules/kerberos/build'
+  CXX(target) Release/obj.target/kerberos/lib/kerberos.o
+  CXX(target) Release/obj.target/kerberos/lib/worker.o
+  CC(target) Release/obj.target/kerberos/lib/kerberosgss.o
+../lib/kerberosgss.c:36:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic push
+ ^
+../lib/kerberosgss.c:37:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic ignored "-Wdeprecated-declarations"
+ ^
+../lib/kerberosgss.c: In function 'authenticate_gss_client_wrap':
+../lib/kerberosgss.c:446:19: warning: variable 'server_conf_flags' set but not used [-Wunused-but-set-variable]
+   char buf[4096], server_conf_flags;
+                   ^
+../lib/kerberosgss.c: At top level:
+../lib/kerberosgss.c:1236:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic pop
+ ^
+  CC(target) Release/obj.target/kerberos/lib/base64.o
+  CXX(target) Release/obj.target/kerberos/lib/kerberos_context.o
+  SOLINK_MODULE(target) Release/obj.target/kerberos.node
+/usr/bin/ld: cannot find -lkrb5
+/usr/bin/ld: cannot find -lgssapi_krb5
+collect2: error: ld returned 1 exit status
+make: *** [Release/obj.target/kerberos.node] Error 1
+kerberos.target.mk:138: recipe for target 'Release/obj.target/kerberos.node' failed
+make: Leaving directory '/server/node_modules/kerberos/build'
+gyp ERR! build error
+gyp ERR! stack Error: `make` failed with exit code: 2
+gyp ERR! stack     at ChildProcess.onExit (/root/.nvm/versions/node/v8.11.1/lib/node_modules/npm/node_modules/node-gyp/lib/build.js:258:23)
+gyp ERR! stack     at emitTwo (events.js:126:13)
+gyp ERR! stack     at ChildProcess.emit (events.js:214:7)
+gyp ERR! stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:198:12)
+gyp ERR! System Linux 3.10.0-862.2.3.el7.x86_64
+gyp ERR! command "/root/.nvm/versions/node/v8.11.1/bin/node" "/root/.nvm/versions/node/v8.11.1/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js" "rebuild"
+gyp ERR! cwd /server/node_modules/kerberos
+gyp ERR! node -v v8.11.1
+gyp ERR! node-gyp -v v3.6.2
+gyp ERR! not ok
+
+> libpq@1.8.8 install /server/node_modules/libpq
+> node-gyp rebuild
+
+make: Entering directory '/server/node_modules/libpq/build'
+  CXX(target) Release/obj.target/addon/src/connection.o
+../src/connection.cc: In member function 'void Connection::Emit(const char*)':
+../src/connection.cc:804:46: warning: 'v8::Local<v8::Value> Nan::MakeCallback(v8::Local<v8::Object>, v8::Local<v8::Function>, int, v8::Local<v8::Value>*)' is deprecated [-Wdeprecated-declarations]
+   Nan::MakeCallback(handle(), emit_f, 1, info);
+                                              ^
+In file included from ../src/addon.h:4:0,
+                 from ../src/connection.cc:1:
+../node_modules/nan/nan.h:929:46: note: declared here
+   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+                                              ^
+  CXX(target) Release/obj.target/addon/src/connect-async-worker.o
+  CXX(target) Release/obj.target/addon/src/addon.o
+  SOLINK_MODULE(target) Release/obj.target/addon.node
+  COPY Release/addon.node
+make: Leaving directory '/server/node_modules/libpq/build'
+
+> bcrypt@0.8.6 install /server/node_modules/bcrypt
+> node-gyp rebuild
+
+make: Entering directory '/server/node_modules/bcrypt/build'
+  CXX(target) Release/obj.target/bcrypt_lib/src/blowfish.o
+  CXX(target) Release/obj.target/bcrypt_lib/src/bcrypt.o
+  CXX(target) Release/obj.target/bcrypt_lib/src/bcrypt_node.o
+In file included from ../../nan/nan.h:194:0,
+                 from ../src/bcrypt_node.cc:1:
+../../nan/nan_maybe_43_inl.h: In function 'Nan::MaybeLocal<v8::Object> Nan::CloneElementAt(v8::Local<v8::Array>, uint32_t)':
+../../nan/nan_maybe_43_inl.h:220:58: warning: 'v8::MaybeLocal<v8::Object> v8::Array::CloneElementAt(v8::Local<v8::Context>, uint32_t)' is deprecated: Cloning is not supported. [-Wdeprecated-declarations]
+   return array->CloneElementAt(GetCurrentContext(), index);
+                                                          ^
+In file included from /root/.node-gyp/8.11.1/include/node/v8.h:26:0,
+                 from /root/.node-gyp/8.11.1/include/node/node.h:63,
+                 from ../../nan/nan.h:45,
+                 from ../src/bcrypt_node.cc:1:
+/root/.node-gyp/8.11.1/include/node/v8.h:3517:36: note: declared here
+                 MaybeLocal<Object> CloneElementAt(Local<Context> context,
+                                    ^
+/root/.node-gyp/8.11.1/include/node/v8config.h:318:3: note: in definition of macro 'V8_DEPRECATED'
+   declarator __attribute__((deprecated(message)))
+   ^
+In file included from ../../nan/nan_new.h:189:0,
+                 from ../../nan/nan.h:200,
+                 from ../src/bcrypt_node.cc:1:
+../../nan/nan_implementation_12_inl.h: In static member function 'static Nan::imp::FactoryBase<v8::BooleanObject>::return_t Nan::imp::Factory<v8::BooleanObject>::New(bool)':
+../../nan/nan_implementation_12_inl.h:40:38: warning: 'static v8::Local<v8::Value> v8::BooleanObject::New(bool)' is deprecated: Pass an isolate [-Wdeprecated-declarations]
+   return v8::BooleanObject::New(value).As<v8::BooleanObject>();
+                                      ^
+In file included from /root/.node-gyp/8.11.1/include/node/v8.h:26:0,
+                 from /root/.node-gyp/8.11.1/include/node/node.h:63,
+                 from ../../nan/nan.h:45,
+                 from ../src/bcrypt_node.cc:1:
+/root/.node-gyp/8.11.1/include/node/v8.h:4845:56: note: declared here
+   V8_DEPRECATED("Pass an isolate", static Local<Value> New(bool value));
+                                                        ^
+/root/.node-gyp/8.11.1/include/node/v8config.h:318:3: note: in definition of macro 'V8_DEPRECATED'
+   declarator __attribute__((deprecated(message)))
+   ^
+In file included from ../src/bcrypt_node.cc:1:0:
+../../nan/nan.h: In function 'bool Nan::SetAccessor(v8::Local<v8::Object>, v8::Local<v8::String>, Nan::GetterCallback, Nan::SetterCallback, v8::Local<v8::Value>, v8::AccessControl, v8::PropertyAttribute)':
+../../nan/nan.h:1961:16: warning: 'bool v8::Object::SetAccessor(v8::Local<v8::Name>, v8::AccessorNameGetterCallback, v8::AccessorNameSetterCallback, v8::Local<v8::Value>, v8::AccessControl, v8::PropertyAttribute)' is deprecated: Use maybe version [-Wdeprecated-declarations]
+     , attribute);
+                ^
+In file included from /root/.node-gyp/8.11.1/include/node/v8.h:26:0,
+                 from /root/.node-gyp/8.11.1/include/node/node.h:63,
+                 from ../../nan/nan.h:45,
+                 from ../src/bcrypt_node.cc:1:
+/root/.node-gyp/8.11.1/include/node/v8.h:3187:22: note: declared here
+                 bool SetAccessor(Local<Name> name,
+                      ^
+/root/.node-gyp/8.11.1/include/node/v8config.h:318:3: note: in definition of macro 'V8_DEPRECATED'
+   declarator __attribute__((deprecated(message)))
+   ^
+  SOLINK_MODULE(target) Release/obj.target/bcrypt_lib.node
+  COPY Release/bcrypt_lib.node
+make: Leaving directory '/server/node_modules/bcrypt/build'
+
+> sinon@4.5.0 postinstall /server/node_modules/sinon
+> node scripts/support-sinon.js
+
+Have some ❤️ for Sinon? You can support the project via Open Collective:
+ > https://opencollective.com/sinon/donate
+
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: polisServerBrand@git+https://github.com/colinmegill/polisServerBrand.git#master (node_modules/polisServerBrand):
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: No git binary found in $PATH
+npm WARN polis@0.0.0 No license field.
+
+added 370 packages in 154.17s
+Removing intermediate container 4296730dae37
+ ---> 50eae93abd0c
+Step 9/11 : RUN ls -la
+ ---> Running in 79f5102cb770
+total 152
+drwxr-xr-x. 1 root root     51 May 27 05:33 .
+drwxr-xr-x. 1 root root      6 May 27 05:33 ..
+drwxr-xr-x. 1 root root   8192 May 27 05:33 node_modules
+-rw-r--r--. 1 root root 133153 May 27 05:33 package-lock.json
+-rwxrwxr-x. 1 root root   1586 May 27 05:31 package.json
+-rwxrwxr-x. 1 root root    335 May 27 05:11 pgsql-client.sh
+Removing intermediate container 79f5102cb770
+ ---> 3e9b5a570de9
+Step 10/11 : RUN npm install
+ ---> Running in 073249a8fbe9
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: polisServerBrand@git+https://github.com/colinmegill/polisServerBrand.git#master (node_modules/polisServerBrand):
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: No git binary found in $PATH
+npm WARN polis@0.0.0 No license field.
+
+up to date in 1.635s
+Removing intermediate container 073249a8fbe9
+ ---> 2cb651669fc8
