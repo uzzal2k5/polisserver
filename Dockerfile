@@ -10,16 +10,11 @@ RUN chmod a+x pgsql-client.sh && sh pgsql-client.sh
 ADD polisServer ./
 
 # Generate package.json and install
-# RUN npm init -y
-#COPY package.json .
+
 RUN npm i -D eslint
 RUN npm install --unsafe-perm
-#RUN npm install babel-eslint
-#RUN npm install bluebird
+
 COPY .env_dev ./
-
-#RUN npm install
-
 
 
 EXPOSE 5000
