@@ -10,13 +10,14 @@ RUN chmod a+x pgsql-client.sh && sh pgsql-client.sh
 ADD polisServer ./
 
 # Generate package.json and install
-
 RUN npm i -D eslint
 RUN npm install --unsafe-perm
 
+# Copying environment configuration
 COPY .env_dev ./
 
-
+# Exposing port to communicate
 EXPOSE 5000
 
+# Executing scripts
 ENTRYPOINT ["sh","x"]
